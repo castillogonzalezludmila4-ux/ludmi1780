@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo  de Vacantes 20267| E.E.S.T. Nº 2 "escuela secundaria"</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#030712',
+                            card: '#0B1329',
+                            cardBorder: '#1E293B',
+                            cyan: '#06B6D4',
+                            electric: '#3B82F6',
+                            neonPurple: '#8B5CF6',
+                            gold: '#F59E0B',
+                            goldBright: '#FBBF24',
+                            emerald: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-glow': 'pulseGlow 2s infinite alternate',
+                        'float': 'float 4s ease-in-out infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                        'bounce-subtle': 'bounceSubtle 2s infinite'
+                    },
+                    keyframes: {
+                        pulseGlow: {
+                            '0%': { boxShadow: '0 0 15px rgba(6, 182, 212, 0.3)' },
+                            '100%': { boxShadow: '0 0 35px rgba(59, 130, 246, 0.7)' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        bounceSubtle: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-5px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030712;
+            color: #F3F4F6;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(11, 19, 41, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .glass-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(11, 19, 41, 0.9) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(6, 182, 212, 0.6);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(6, 182, 212, 0.25);
+        }
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #38BDF8 0%, #06B6D4 50%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #FDE047 0%, #F59E0B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .neon-border-cyan {
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+        }
+
+        .neon-border-gold {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030712;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06B6D4;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-cyan selection:text-black">
+
+    <div class="fixed top-0 left-1/4 w-[500px] h-[500px] bg-brand-cyan/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="fixed bottom-10 right-10 w-[600px] h-[600px] bg-brand-electric/10 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-neonPurple/5 rounded-full blur-[180px] pointer-events-none z-0"></div>
+
+    <div class="bg-gradient-to-r from-brand-electric via-brand-cyan to-brand-neonPurple text-white py-2 px-4 text-xs font-bold uppercase tracking-widest relative z-20 shadow-lg">
+        <div class="max-w-7xl mx-auto flex justify-between items-center overflow-hidden">
+            <div class="flex items-center space-x-3 animate-pulse">
+                <span class="bg-red-600 text-white px-2 py-0.5 rounded-md font-black text-[10px] tracking-wider animate-bounce">URGENTE SAD</span>
+                <span>COMUNICADO OFICIAL N° 42/2026 - TRANSMISIÓN EN VIVO FISCALIZADA Y CERTIFICADA POR ESCRIBANO PÚBLICO</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-4 text-[11px]">
+                <span><i class="fa-solid fa-location-dot text-yellow-300 mr-1"></i> Valentín Alsina, Lanús</span>
+                <span><i class="fa-solid fa-phone text-yellow-300 mr-1"></i> (011) 4208-XXXX</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-panel border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+         
+            <div class="flex items-center space-x-4">
+                <div class="relative group cursor-pointer">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brand-cyan to-brand-electric rounded-xl blur opacity-70 group-hover:opacity-100 transition duration-300"></div>
+                    <div class="relative w-12 h-12 bg-gray-950 rounded-xl flex items-center justify-center border border-slate-700">
+                        <i class="fa-solid fa-graduation-cap text-2xl text-brand-cyan"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brand-cyan block">E.E.S.T. Nº 2</span>
+                    <h1 class="text-lg font-extrabold text-white tracking-tight leading-none">
+                        Dr. Valentín Alsina <span class="text-xs text-slate-400 font-normal hidden sm:inline"> escuela tecnica2</span>
+                    </h1>
+                </div>
+            </div>
+
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-slate-300">
+                <a href="#comunicado" class="hover:text-brand-cyan transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-bullhorn text-xs text-brand-cyan"></i> Comunicado
+                </a>
+                <a href="#buscador" class="hover:text-brand-cyan transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-magnifying-glass text-xs text-brand-cyan"></i> Consultar DNI
+                </a>
+                <a href="#bolillero" class="hover:text-brand-cyan transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-cubes text-xs text-brand-cyan"></i> Bolillero Digital
+                </a>
+                <a href="#cronograma" class="hover:text-brand-cyan transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-calendar-days text-xs text-brand-cyan"></i> Cronograma
+                </a>
+                <a href="#faq" class="hover:text-brand-cyan transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-circle-question text-xs text-brand-cyan"></i> Requisitos
+                </a>
+            </nav>
+
+            <div class="flex items-center space-x-3">
+                <button onclick="openModal('modalAviso')" class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-xs font-bold text-white rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-600 group-hover:from-cyan-500 group-hover:to-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-cyan-800 shadow-lg shadow-cyan-500/30">
+                    <span class="relative px-4 py-2.5 transition-all ease-in duration-75 bg-gray-950 rounded-md group-hover:bg-opacity-0 flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400 text-sm"></i>
+                        <span>Aviso Oficial PDF</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative z-10 flex-grow">
+
+        <section class="relative pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+            
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900/90 border border-brand-cyan/40 text-brand-cyan text-xs font-extrabold uppercase tracking-wider mb-8 shadow-inner animate-float">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                PROCESO OFICIAL DE ASIGNACIÓN DE VACANTES - CICLO LECTIVO 2026
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+                Sorteo Transparente de <br class="hidden sm:inline"/>
+                <span class="text-gradient-cyan">Vacantes Institucionales</span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-base sm:text-lg text-slate-300 font-normal leading-relaxed mb-10">
+                Garantizando el acceso justo, equitativo y certificado para el ingreso a 1° Año de las Tecnicaturas Profesionales de la escuela pública de Valentín Alsina.
+            </p>
+
+            <div class="max-w-4xl mx-auto glass-card rounded-3xl p-6 sm:p-8 neon-border-cyan mb-12">
+                <div class="flex items-center justify-center gap-2 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6">
+                    <i class="fa-solid fa-clock text-base animate-spin-slow"></i>
+                    TIEMPO RESTANTE PARA EL INICIO DEL SORTEO OFICIAL
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4" id="countdown">
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
+                        <span id="cd-days" class="text-3xl sm:text-5xl font-black text-gradient-cyan">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase mt-2">Días</span>
+                    </div>
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
+                        <span id="cd-hours" class="text-3xl sm:text-5xl font-black text-gradient-cyan">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase mt-2">Horas</span>
+                    </div>
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
+                        <span id="cd-minutes" class="text-3xl sm:text-5xl font-black text-gradient-cyan">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase mt-2">Minutos</span>
+                    </div>
+                    <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-4 flex flex-col items-center">
+                        <span id="cd-seconds" class="text-3xl sm:text-5xl font-black text-gradient-gold">00</span>
+                        <span class="text-xs font-bold text-slate-400 uppercase mt-2">Segundos</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 flex flex-wrap items-center justify-center gap-6 text-xs text-slate-400 font-medium">
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-calendar-check text-brand-cyan"></i> Viernes 14 de Noviembre, 10:00 HS</span>
+                    <span class="flex items-center gap-2"><i class="fa-solid fa-building-shield text-brand-cyan"></i> Salón de Actos Institucional</span>
+                </div>
+            </div>
+
+        
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+             
+                <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-brand-cyan/10 rounded-full blur-xl group-hover:bg-brand-cyan/20 transition-all"></div>
+                    <div class="w-12 h-12 bg-brand-cyan/20 rounded-xl flex items-center justify-center text-brand-cyan text-xl mb-4 border border-brand-cyan/30">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-1">Tecnicatura en Informática</h2>
+                    <p class="text-xs text-slate-400 mb-4">Desarrollo de Software, Redes, Sistemas y Programación Avanzada.</p>
+                    <div class="flex justify-between items-center text-xs font-semibold pt-4 border-t border-slate-800">
+                        <span class="text-slate-400">Cupo estimado:</span>
+                        <span class="text-brand-cyan font-bold">60 Vacantes</span>
+                    </div>
+                </div>
+
+             
+                <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-brand-electric/10 rounded-full blur-xl group-hover:bg-brand-electric/20 transition-all"></div>
+                    <div class="w-12 h-12 bg-brand-electric/20 rounded-xl flex items-center justify-center text-brand-electric text-xl mb-4 border border-brand-electric/30">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-1">Tecnicatura en Electromecánica</h2>
+                    <p class="text-xs text-slate-400 mb-4">Automatización, Máquinas Eléctricas, Mantenimiento e Industria 4.0.</p>
+                    <div class="flex justify-between items-center text-xs font-semibold pt-4 border-t border-slate-800">
+                        <span class="text-slate-400">Cupo estimado:</span>
+                        <span class="text-brand-electric font-bold">60 Vacantes</span>
+                    </div>
+                </div>
+
+              
+                <div class="glass-card rounded-2xl p-6 relative overflow-hidden group">
+                    <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-brand-gold/10 rounded-full blur-xl group-hover:bg-brand-gold/20 transition-all"></div>
+                    <div class="w-12 h-12 bg-brand-gold/20 rounded-xl flex items-center justify-center text-brand-gold text-xl mb-4 border border-brand-gold/30">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h2 class="text-xl font-bold text-white mb-1">Maestro Mayor de Obras</h2>
+                    <p class="text-xs text-slate-400 mb-4">Diseño Arquitectónico, Proyecto, Estructuras y Cómputo de Obra.</p>
+                    <div class="flex justify-between items-center text-xs font-semibold pt-4 border-t border-slate-800">
+                        <span class="text-slate-400">Cupo estimado:</span>
+                        <span class="text-brand-gold font-bold">30 Vacantes</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+      
+        <section id="comunicado" class="py-12 bg-slate-950/60 border-y border-slate-800/80 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="glass-card rounded-3xl p-8 border border-yellow-500/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-yellow-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="flex flex-col lg:flex-row gap-8 items-start">
+                        <div class="w-16 h-16 bg-brand-gold/20 rounded-2xl flex items-center justify-center text-brand-gold text-3xl shrink-0 border border-brand-gold/40">
+                            <i class="fa-solid fa-triangle-exclamation animate-bounce-subtle"></i>
+                        </div>
+
+                        <div class="flex-grow">
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs font-extrabold uppercase rounded-md border border-yellow-500/30">COMUNICADO DIRECCIÓN ESCOLAR</span>
+                                <span class="text-xs text-slate-400"><i class="fa-solid fa-clock"></i> Actualizado hoy a las 08:30 HS</span>
+                            </div>
+                            <h2 class="text-2xl font-extrabold text-white mb-4">Reglamento y Pautas para el Sorteo Presencial y Virtual</h2>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-300 leading-relaxed mb-6">
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                        <span>El sorteo será transmitido en directo por nuestro canal institucional en YouTube y Facebook Live.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-cyan mt-1"></i>
+                                        <span>Presencia confirmada de inspectores de la Jefatura Distrital de Lanús y la SAD.</span>
+                                    </li>
+                                </ul>
+                                <ul class="space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                                        <span>No es obligatoria la presencia física para mantener la vacante. Los resultados se publicarán automáticamente en esta web.</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fa-solid fa-circle-check text-brand-gold mt-1"></i>
+                                        <span>Los alumnos ingresantes directos (hermanos/hijos de personal) no van a bolillero según Resol. Directorio.</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="flex flex-wrap gap-4">
+                                <button onclick="openModal('modalAviso')" class="px-5 py-2.5 bg-brand-gold hover:bg-yellow-500 text-slate-950 font-extrabold text-xs rounded-xl transition-all shadow-lg shadow-yellow-500/20 flex items-center gap-2">
+                                    <i class="fa-solid fa-book-open"></i> LEER COMUNICADO COMPLETO
+                                </button>
+                                <a href="#faq" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs rounded-xl transition-all border border-slate-700 flex items-center gap-2">
+                                    <i class="fa-solid fa-download"></i> DESCARGAR PLANILLA DE PREINSCRIPCIÓN
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section id="buscador" class="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <div class="text-center mb-10">
+                <span class="text-xs font-extrabold text-brand-cyan tracking-widest uppercase">CONSULTA ONLINE DE PADRÓN</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Buscador Oficial de Estado por DNI</h2>
+                <p class="text-slate-400 text-sm mt-2">Ingresá el número de documento del aspirante (sin puntos ni espacios) para verificar su vacante asignada o posición en lista de espera.</p>
+            </div>
+
+            <div class="glass-card rounded-3xl p-6 sm:p-10 border border-brand-cyan/40 neon-border-cyan relative">
+                <form id="dniForm" onsubmit="event.preventDefault(); buscarDNI();" class="space-y-4">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <div class="relative flex-grow">
+                            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none text-slate-500">
+                                <i class="fa-solid fa-id-card text-xl"></i>
+                            </div>
+                            <input type="text" id="inputDni" maxlength="8" placeholder="Ej: 48123456" 
+                                class="w-full pl-14 pr-4 py-4 bg-slate-950/90 border border-slate-700 rounded-2xl text-white placeholder-slate-500 text-lg font-bold focus:outline-none focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/30 transition-all"/>
+                        </div>
+                        <button type="submit" class="py-4 px-8 bg-gradient-to-r from-brand-cyan to-brand-electric hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-black text-base rounded-2xl transition-all shadow-lg shadow-cyan-500/30 flex items-center justify-center gap-3 shrink-0">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>CONSULTAR ESTADO</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between text-xs text-slate-400 px-2">
+                        <span><i class="fa-solid fa-shield-halved text-brand-cyan"></i> Búsqueda encriptada y segura</span>
+                        <span class="hover:text-brand-cyan cursor-pointer" onclick="fillDniSample('48123456')">Probar con DNI de prueba (Ej: 48123456)</span>
+                    </div>
+                </form>
+
+             
+                <div id="dniResultContainer" class="mt-8 hidden">
+                 
+                    <div id="dniLoading" class="py-12 flex flex-col items-center justify-center space-y-4 hidden">
+                        <div class="w-12 h-12 border-4 border-brand-cyan border-t-transparent rounded-full animate-spin"></div>
+                        <p class="text-sm font-semibold text-slate-300">Consultando Base de Datos Oficial de Padrones E.E.S.T. N° 2...</p>
+                    </div>
+
+                 
+                    <div id="dniCard" class="bg-slate-950/90 border rounded-2xl p-6 sm:p-8 relative overflow-hidden">
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: DIGITAL BALLOT SIMULATOR (INTERACTIVE TESTER) -->
+        <section id="bolillero" class="py-16 bg-slate-950/80 border-y border-slate-800 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-xs font-extrabold text-brand-gold tracking-widest uppercase">TRANSPARENCIA AL 100%</span>
+                        <h2 class="text-3xl font-extrabold text-white">Simulador Digital del Bolillero Oficial</h2>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Para garantizar la aleatoriedad perfecta y auditable del proceso, la escuela dispone de un algoritmo criptográfico generador de orden de prelación. Podés simular una tirada en vivo ahora mismo.
+                        </p>
+                        
+                        <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-brand-gold/20 text-brand-gold flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-code-compare"></i>
+                            </div>
+                            <div class="text-xs text-slate-300">
+                                <strong>Semilla Hash Algorítmica:</strong> SHA-256 Verificable en la Cámara de Inspección Lanús.
+                            </div>
+                        </div>
+
+                        <button onclick="simularBolillero()" id="btnBolillero" class="w-full py-4 bg-gradient-to-r from-brand-gold to-amber-600 hover:from-yellow-400 hover:to-amber-500 text-slate-950 font-black text-sm uppercase tracking-wider rounded-2xl transition-all shadow-lg shadow-amber-500/20 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-arrows-rotate text-lg" id="iconBolillero"></i>
+                            <span>GIRAR BOLILLERO DE PRUEBA</span>
+                        </button>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="glass-card rounded-3xl p-8 border border-slate-800 text-center relative overflow-hidden">
+                            <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">BOLILLA EXTRAÍDA EN TIEMPO REAL</h3>
+                            
+                            <!-- BIG DIGITAL DISPLAY -->
+                            <div class="relative w-40 h-40 mx-auto mb-6 flex items-center justify-center">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-brand-cyan to-brand-gold rounded-full blur-lg opacity-40 animate-pulse"></div>
+                                <div id="bolillaDisplay" class="relative w-36 h-36 bg-slate-950 border-4 border-brand-cyan rounded-full flex items-center justify-center text-5xl font-black text-white shadow-2xl">
+                                    #000
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-3 gap-4 text-center text-xs border-t border-slate-800/80 pt-6">
+                                <div>
+                                    <span class="block text-slate-500">Aspirante Simulado</span>
+                                    <span id="bolillaNombre" class="font-bold text-slate-200">Esperando tiro...</span>
+                                </div>
+                                <div>
+                                    <span class="block text-slate-500">Modalidad</span>
+                                    <span id="bolillaEspecialidad" class="font-bold text-brand-cyan">-</span>
+                                </div>
+                                <div>
+                                    <span class="block text-slate-500">Resultado</span>
+                                    <span id="bolillaEstado" class="font-bold text-emerald-400">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="cronograma" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-xs font-extrabold text-brand-cyan tracking-widest uppercase">HOJA DE RUTA DEL ASPIRANTE</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Cronograma Institucional y Fechas Clave</h2>
+                <p class="text-slate-400 text-sm mt-2">Seguí los pasos requeridos por la Secretaría Escolar para asegurar el banco de tu hijo/a.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+               
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between">
+                    <div class="w-10 h-10 bg-brand-cyan text-slate-950 font-black rounded-xl flex items-center justify-center mb-4 text-base shadow-lg shadow-cyan-500/30">01</div>
+                    <div>
+                        <span class="text-xs text-brand-cyan font-bold uppercase">HASTA EL 05 NOV</span>
+                        <h3 class="text-lg font-bold text-white mt-1 mb-2">Publicación Padrón</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Revisión de los listados provisionales de preinscriptos y verificación de datos personales.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-emerald-400 font-semibold">
+                        <i class="fa-solid fa-circle-check"></i> ETAPA FINALIZADA
+                    </div>
+                </div>
+
+               
+                <div class="glass-card rounded-2xl p-6 border-2 border-brand-gold relative flex flex-col justify-between">
+                    <div class="w-10 h-10 bg-brand-gold text-slate-950 font-black rounded-xl flex items-center justify-center mb-4 text-base shadow-lg shadow-amber-500/30">02</div>
+                    <div>
+                        <span class="text-xs text-brand-gold font-bold uppercase">14 NOV - 10:00 HS</span>
+                        <h3 class="text-lg font-bold text-white mt-1 mb-2">Sorteo Público</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Ejecución del bolillero en el Salón de Actos con transmisión en vivo simultánea.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-brand-gold font-semibold flex items-center gap-1">
+                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-ping"></span> PRÓXIMO EVENTO
+                    </div>
+                </div>
+
+             
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between">
+                    <div class="w-10 h-10 bg-slate-800 text-slate-300 font-black rounded-xl flex items-center justify-center mb-4 text-base">03</div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-bold uppercase">17 AL 21 NOV</span>
+                        <h3 class="text-lg font-bold text-white mt-1 mb-2">Confirmación Matrícula</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Presentación presencial de documentación física en la Secretaría de la EEST N° 2.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500 font-semibold">
+                        <i class="fa-solid fa-clock"></i> PENDIENTE
+                    </div>
+                </div>
+
+            
+                <div class="glass-card rounded-2xl p-6 relative flex flex-col justify-between">
+                    <div class="w-10 h-10 bg-slate-800 text-slate-300 font-black rounded-xl flex items-center justify-center mb-4 text-base">04</div>
+                    <div>
+                        <span class="text-xs text-slate-400 font-bold uppercase">01 DIC EN ADELANTE</span>
+                        <h3 class="text-lg font-bold text-white mt-1 mb-2">Llamado Lista Espera</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Asignación progresiva de vacantes liberadas respetando el orden estricto del sorteo.</p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-[11px] text-slate-500 font-semibold">
+                        <i class="fa-solid fa-clock"></i> PENDIENTE
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="faq" class="py-20 bg-slate-950/70 border-t border-slate-800">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span class="text-xs font-extrabold text-brand-cyan tracking-widest uppercase">RESOLVÉ TUS DUDAS</span>
+                    <h2 class="text-3xl font-extrabold text-white mt-2">Requisitos y Preguntas Frecuentes</h2>
+                </div>
+
+         
+                <div class="space-y-4">
+                  
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                        <button onclick="toggleFaq(1)" class="w-full p-6 text-left font-bold text-white flex justify-between items-center hover:text-brand-cyan transition-colors">
+                            <span class="flex items-center gap-3 text-base">
+                                <i class="fa-solid fa-folder-open text-brand-cyan"></i>
+                                ¿Qué documentación debo presentar para confirmar la vacante?
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform" id="faqIcon-1"></i>
+                        </button>
+                        <div id="faqContent-1" class="hidden px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>Original y 2 copias del DNI del alumno/a y del adulto responsable.</li>
+                                <li>Constancia de Alumno Regular de 6° Año de Educación Primaria / Analítico de Estudios.</li>
+                                <li>Partida de Nacimiento (copia autenticada o legible).</li>
+                                <li>Ficha de Salud y Vacunación Completa (Planilla de la DGCyE).</li>
+                                <li>Bono Contribución Voluntario para la Asociación Cooperadora Escolar.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                  
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                        <button onclick="toggleFaq(2)" class="w-full p-6 text-left font-bold text-white flex justify-between items-center hover:text-brand-cyan transition-colors">
+                            <span class="flex items-center gap-3 text-base">
+                                <i class="fa-solid fa-users text-brand-cyan"></i>
+                                ¿Quiénes tienen asignación directa sin ir a sorteo?
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform" id="faqIcon-2"></i>
+                        </button>
+                        <div id="faqContent-2" class="hidden px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                            Conforme a la normativa vigente de la Dirección General de Cultura y Educación (DGCyE):
+                            <ul class="list-disc list-inside space-y-1 mt-2">
+                                <li>Hermanos/as de alumnos actualmente matriculados en la E.E.S.T. N° 2.</li>
+                                <li>Hijos/as del personal docente y no docente de la institución.</li>
+                                <li>Articulación directa con escuelas primarias del distrito asignadas por la SAD.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                 
+                    <div class="glass-card rounded-2xl overflow-hidden border border-slate-800">
+                        <button onclick="toggleFaq(3)" class="w-full p-6 text-left font-bold text-white flex justify-between items-center hover:text-brand-cyan transition-colors">
+                            <span class="flex items-center gap-3 text-base">
+                                <i class="fa-solid fa-hourglass-half text-brand-cyan"></i>
+                                ¿Cómo funciona la Lista de Espera?
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-sm text-slate-500 transition-transform" id="faqIcon-3"></i>
+                        </button>
+                        <div id="faqContent-3" class="hidden px-6 pb-6 text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                            Si el alumno queda en Lista de Espera, se le asigna un número según el bolillero. Si algún ingresante no presenta la documentación en las fechas estipuladas (17 al 21 de noviembre), la vacante se libera automáticamente y se convoca por teléfono/email al siguiente de la lista en estricto orden.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <div id="modalAviso" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md hidden">
+        <div class="glass-card rounded-3xl max-w-2xl w-full p-6 sm:p-8 border border-brand-cyan/50 shadow-2xl relative animate-float">
+            <button onclick="closeModal('modalAviso')" class="absolute top-5 right-5 text-slate-400 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center gap-3 mb-4 text-brand-gold font-bold text-sm">
+                <i class="fa-solid fa-scroll text-lg"></i>
+                <span>SECRETARÍA EEST N° 2 - DOCUMENTO EDITORIAL</span>
+            </div>
+            <h3 class="text-2xl font-extrabold text-white mb-4">Resolución Oficial sobre Transparencia del Sorteo 2026</h3>
+            <div class="text-xs text-slate-300 space-y-3 leading-relaxed mb-6 max-h-60 overflow-y-auto pr-2">
+                <p><strong>VISTO:</strong> La alta demanda de preinscripciones registradas para el Ciclo Lectivo 2026 en las especialidades de Informática, Electromecánica y Maestro Mayor de Obras.</p>
+                <p><strong>SE RESUELVE:</strong></p>
+                <p>1. Establecer el día 14 de Noviembre de 2026 como fecha única e impostergable para la realización del Acto Público de Sorteo.</p>
+                <p>2. Disponer la fiscalización presencial de representantes de la Jefatura Distrital de Lanús y veedores de la Asociación Cooperadora.</p>
+                <p>3. Publicar el listado final certificado dentro de las 2 horas posteriores al término del acto en las carteleras de la escuela y en esta plataforma digital.</p>
+            </div>
+            <button onclick="closeModal('modalAviso')" class="w-full py-3 bg-brand-cyan hover:bg-cyan-400 text-slate-950 font-extrabold text-sm rounded-xl transition-all">
+                ENTENDIDO Y CONFIRMADO
+            </button>
+        </div>
+    </div>
+
+
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-12 relative z-10 text-xs text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div>
+                <span class="text-white font-extrabold text-sm block mb-1">E.E.S.T. Nº 2 "Dr. Valentín Alsina"</span>
+                <p>Escuela de Educación Secundaria Técnica Pública • Lanús, Bs.As.</p>
+                <p class="mt-2 text-[11px] text-slate-600">Colegio del Paraná - Educación Pública Técnica de Excelencia.</p>
+            </div>
+            <div class="text-center md:text-left">
+                <p><i class="fa-solid fa-location-dot text-brand-cyan mr-1"></i> Guatemala 3050, Valentín Alsina, Provincia de Buenos Aires</p>
+                <p class="mt-1"><i class="fa-solid fa-envelope text-brand-cyan mr-1"></i> eest2lanus@abc.gob.ar</p>
+            </div>
+            <div class="text-center md:text-right">
+                <p>© 2026 EEST N° 2 - Portal Oficial de Sorteo de Vacantes</p>
+                <p class="mt-1 text-[10px] text-slate-600">Sistema Certificado para Ingreso Escolar Técnico</p>
+            </div>
+        </div>
+    </footer>
+
+   
+    <script>
+        
+        const padronDatabase = {
+            "48123456": {
+                nombre: "González, Mateo Ignacio",
+                especialidad: "Tecnicatura en Informática",
+                estado: "ASIGNADO",
+                orden: 12,
+                turno: "Mañana",
+                observacion: "Vacante otorgada de forma directa. Presentar documentación antes del 21/11."
+            },
+            "48987654": {
+                nombre: "Martínez, Sofía Belén",
+                especialidad: "Tecnicatura en Electromecánica",
+                estado: "ASIGNADO",
+                orden: 4,
+                turno: "Tarde",
+                observacion: "Vacante confirmada por bolillero oficial."
+            },
+            "48555444": {
+                nombre: "Rodríguez, Lucas Agustín",
+                especialidad: "Maestro Mayor de Obras",
+                estado: "LISTA DE ESPERA",
+                orden: 8,
+                turno: "A confirmar",
+                observacion: "En posición #8 de espera. Se convocará si se liberan cupos desde el 01/12."
+            },
+            "48111222": {
+                nombre: "López, Valentina",
+                especialidad: "Tecnicatura en Informática",
+                estado: "DOCUMENTACIÓN PENDIENTE",
+                orden: 29,
+                turno: "Mañana",
+                observacion: "Presentar constancia de Alumno Regular urgente en Secretaría."
+            }
+        };
+
+        
+        function initCountdown() {
+            // Target Date: Nov 14, 2026 10:00:00
+            const targetDate = new Date("November 14, 2026 10:00:00").getTime();
+
+            function update() {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    document.getElementById("cd-days").innerText = "00";
+                    document.getElementById("cd-hours").innerText = "00";
+                    document.getElementById("cd-minutes").innerText = "00";
+                    document.getElementById("cd-seconds").innerText = "00";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("cd-days").innerText = days < 10 ? "0" + days : days;
+                document.getElementById("cd-hours").innerText = hours < 10 ? "0" + hours : hours;
+                document.getElementById("cd-minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+                document.getElementById("cd-seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+            }
+
+            update();
+            setInterval(update, 1000);
+        }
+
+        // DNI SEARCH ENGINE
+        function buscarDNI() {
+            const input = document.getElementById("inputDni").value.trim();
+            const container = document.getElementById("dniResultContainer");
+            const loading = document.getElementById("dniLoading");
+            const card = document.getElementById("dniCard");
+
+            if (!input || input.length < 7) {
+                alert("Por favor, ingresá un número de DNI válido de 7 u 8 dígitos.");
+                return;
+            }
+
+            container.classList.remove("hidden");
+            loading.classList.remove("hidden");
+            card.innerHTML = "";
+
+            setTimeout(() => {
+                loading.classList.add("hidden");
+                const result = padronDatabase[input];
+
+                if (result) {
+                    let badgeColor = "";
+                    let icon = "";
+
+                    if (result.estado === "ASIGNADO") {
+                        badgeColor = "bg-emerald-500/20 text-emerald-400 border-emerald-500/40";
+                        icon = '<i class="fa-solid fa-circle-check text-emerald-400 text-3xl"></i>';
+                    } else if (result.estado === "LISTA DE ESPERA") {
+                        badgeColor = "bg-amber-500/20 text-amber-400 border-amber-500/40";
+                        icon = '<i class="fa-solid fa-clock text-amber-400 text-3xl"></i>';
+                    } else {
+                        badgeColor = "bg-cyan-500/20 text-cyan-400 border-cyan-500/40";
+                        icon = '<i class="fa-solid fa-triangle-exclamation text-cyan-400 text-3xl"></i>';
+                    }
+
+                    card.innerHTML = `
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
+                            <div class="flex items-center gap-4">
+                                ${icon}
+                                <div>
+                                    <span class="text-xs text-slate-400 font-bold uppercase">Aspirante Encontrado</span>
+                                    <h3 class="text-xl font-extrabold text-white">${result.nombre}</h3>
+                                    <span class="text-xs text-brand-cyan">${result.especialidad}</span>
+                                </div>
+                            </div>
+                            <span class="px-4 py-2 rounded-xl text-xs font-black uppercase tracking-wider border ${badgeColor}">
+                                ${result.estado}
+                            </span>
+                        </div>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 py-6 text-xs border-b border-slate-800">
+                            <div>
+                                <span class="text-slate-500 block">Orden de Sorteo:</span>
+                                <span class="text-white font-bold text-sm">#${result.orden}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Turno Asignado:</span>
+                                <span class="text-white font-bold text-sm">${result.turno}</span>
+                            </div>
+                            <div>
+                                <span class="text-slate-500 block">Escuela:</span>
+                                <span class="text-white font-bold text-sm">E.E.S.T. N° 2 (Alsina)</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 text-xs text-slate-300">
+                            <strong>Indicaciones de Secretaría:</strong> ${result.observacion}
+                        </div>
+                    `;
+                } else {
+                    card.innerHTML = `
+                        <div class="text-center py-6">
+                            <i class="fa-solid fa-circle-xmark text-red-500 text-4xl mb-3"></i>
+                            <h3 class="text-lg font-bold text-white mb-1">DNI No Encontrado en el Padrón Preinscripto</h3>
+                            <p class="text-xs text-slate-400 max-w-md mx-auto">
+                                El DNI <strong>${input}</strong> no figura en la base de datos provisional. Verificá haberlo ingresado sin puntos ni espacios o acércate a la Secretaría del Colegio del Paraná.
+                            </p>
+                        </div>
+                    `;
+                }
+            }, 600);
+        }
+
+        function fillDniSample(dni) {
+            document.getElementById("inputDni").value = dni;
+            buscarDNI();
+        }
+
+        // DIGITAL BALLOT SIMULATOR
+        function simularBolillero() {
+            const display = document.getElementById("bolillaDisplay");
+            const btn = document.getElementById("btnBolillero");
+            const icon = document.getElementById("iconBolillero");
+            
+            const nombres = ["Fernández, Tomás", "Romero, Camila", "Benítez, Joaquin", "Sosa, Martina", "Álvarez, Mateo", "Acosta, Lucía"];
+            const especialidades = ["Informática", "Electromecánica", "Maestro Mayor de Obras"];
+
+            btn.disabled = true;
+            icon.classList.add("animate-spin");
+
+            let counter = 0;
+            const interval = setInterval(() => {
+                const randomNum = Math.floor(Math.random() * 150) + 1;
+                display.innerText = `#${randomNum < 100 ? (randomNum < 10 ? '00' + randomNum : '0' + randomNum) : randomNum}`;
+                counter++;
+
+                if (counter > 15) {
+                    clearInterval(interval);
+                    btn.disabled = false;
+                    icon.classList.remove("animate-spin");
+
+                    const finalNum = Math.floor(Math.random() * 90) + 1;
+                    display.innerText = `#${finalNum < 10 ? '00' + finalNum : '0' + finalNum}`;
+                    
+                    document.getElementById("bolillaNombre").innerText = nombres[Math.floor(Math.random() * nombres.length)];
+                    document.getElementById("bolillaEspecialidad").innerText = especialidades[Math.floor(Math.random() * especialidades.length)];
+                    document.getElementById("bolillaEstado").innerText = finalNum <= 60 ? "VACANTE ASIGNADA" : "LISTA ESPERA";
+                    document.getElementById("bolillaEstado").className = finalNum <= 60 ? "font-bold text-emerald-400" : "font-bold text-amber-400";
+                }
+            }, 80);
+        }
+
+        // FAQ ACCORDION TOGGLE
+        function toggleFaq(id) {
+            const content = document.getElementById(`faqContent-${id}`);
+            const icon = document.getElementById(`faqIcon-${id}`);
+
+            if (content.classList.contains("hidden")) {
+                content.classList.remove("hidden");
+                icon.classList.add("rotate-180");
+            } else {
+                content.classList.add("hidden");
+                icon.classList.remove("rotate-180");
+            }
+        }
+
+        // MODAL HELPERS
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove("hidden");
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add("hidden");
+        }
+
+        // INITIALIZE
+        window.onload = function() {
+            initCountdown();
+        };
+    </script>
+</body>
+</html>

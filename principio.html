@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E.E.S.T. N° 2 "Ing. Emilio Mitre" | Valentín Alsina</title>
+
+    <link rel="stylesheet" href="style.css">
+
+   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#07101d',
+                            800: '#0b192c',
+                            700: '#1e3e62',
+                        },
+                        turquoise: {
+                            450: '#00b4d8',
+                            500: '#0077b6',
+                            300: '#90e0ef',
+                            100: '#caf0f8'
+                        },
+                        ambertech: {
+                            500: '#ffb703',
+                            600: '#fb8500'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Titillium+Web:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-navy-900 text-slate-100 min-h-screen flex flex-col selection:bg-turquoise-450 selection:text-navy-900">
+
+   
+    <div class="bg-navy-800 border-b border-turquoise-500/20 text-xs py-2 px-6 font-mono flex flex-wrap justify-between items-center text-turquoise-300">
+        <div class="flex items-center space-x-4">
+            <span class="flex items-center"><span class="h-2 w-2 rounded-full bg-turquoise-450 animate-ping mr-2"></span> STN2 • VALENTÍN ALSINA, LANÚS</span>
+            <span class="hidden md:inline">|</span>
+            <a href="https://www.gba.gob.ar/educacion" target="_blank" class="hover:text-white transition flex items-center"><i class="fa-solid fa-globe mr-1"></i> Portal DGCyE Provincia</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#profesores" class="text-ambertech-500 font-bold hover:underline"><i class="fa-solid fa-chalkboard-user mr-1"></i> Sitio Docente</a>
+            <span>|</span>
+            <span class="text-slate-400">CICLO LECTIVO 2026</span>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-50 bg-navy-900/95 backdrop-blur border-b border-turquoise-500/30 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+              
+                <div class="flex items-center space-x-3.5 group cursor-pointer" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+                    <div class="bg-gradient-to-br from-turquoise-500 to-navy-700 border border-turquoise-450 p-2.5 rounded-xl shadow-lg flex items-center justify-center group-hover:scale-105 transition">
+                        <span class="font-mono text-white font-black text-xl tracking-tighter">STN2</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center space-x-1.5">
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-turquoise-450 font-bold">E.E.S.T. N° 2</span>
+                            <span class="text-slate-500">•</span>
+                            <span class="text-[10px] font-mono uppercase tracking-widest text-slate-300">Alsina</span>
+                        </div>
+                        <h1 class="text-sm sm:text-base font-black tracking-tight text-white uppercase font-mono">"Ing. Emilio Mitre"</h1>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 font-medium">
+                    <a href="#inicio" class="px-3.5 py-2 rounded-lg text-sm text-turquoise-300 bg-navy-800 border border-turquoise-500/30 transition"><i class="fa-solid fa-house mr-1.5"></i> Inicio</a>
+                    <a href="#profesores" class="px-3.5 py-2 rounded-lg text-sm text-ambertech-500 hover:bg-navy-800/50 transition font-bold"><i class="fa-solid fa-chalkboard-user mr-1.5"></i> Zona Profesores</a>
+                    <a href="#programa" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-navy-800/50 transition"><i class="fa-solid fa-timeline mr-1.5"></i> Ciclo Técnico</a>
+                    <a href="#especialidades" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-navy-800/50 transition"><i class="fa-solid fa-screwdriver-wrench mr-1.5"></i> Especialidades</a>
+                    <a href="#herramientas" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-navy-800/50 transition"><i class="fa-solid fa-calculator mr-1.5"></i> Utilidades</a>
+                    <a href="#contacto" class="px-3.5 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-navy-800/50 transition"><i class="fa-solid fa-envelope mr-1.5"></i> Contacto</a>
+                </nav>
+
+                
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-turquoise-300 hover:text-white p-2.5 rounded-lg bg-navy-800 border border-turquoise-500/30 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+  
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-t border-turquoise-500/20 px-4 pt-3 pb-5 space-y-2">
+            <a href="#inicio" class="block px-3.5 py-2 rounded-lg text-base text-turquoise-300 bg-navy-700">Inicio</a>
+            <a href="#profesores" class="block px-3.5 py-2 rounded-lg text-base text-ambertech-500 bg-navy-700 font-bold">Zona Profesores</a>
+            <a href="#programa" class="block px-3.5 py-2 rounded-lg text-base text-slate-200 hover:bg-navy-700">Ciclo Técnico</a>
+            <a href="#especialidades" class="block px-3.5 py-2 rounded-lg text-base text-slate-200 hover:bg-navy-700">Especialidades</a>
+            <a href="#herramientas" class="block px-3.5 py-2 rounded-lg text-base text-slate-200 hover:bg-navy-700">Utilidades</a>
+            <a href="#contacto" class="block px-3.5 py-2 rounded-lg text-base text-slate-200 hover:bg-navy-700">Contacto</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+     
+        <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-navy-900 via-navy-800 to-navy-900 py-20 lg:py-28 border-b border-turquoise-500/20 grid-background">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-left">
+                        <div class="inline-flex items-center space-x-2 bg-navy-800 border border-turquoise-450/40 px-4 py-1.5 rounded-full text-turquoise-300 text-xs font-mono uppercase tracking-wider shadow-md">
+                            <span class="h-2 w-2 rounded-full bg-turquoise-450 animate-ping"></span>
+                            <span>Portal Institucional Interactivo • STN2</span>
+                        </div>
+                        
+                        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight uppercase leading-none font-mono">
+                            Educación técnica de <span class="text-transparent bg-clip-text bg-gradient-to-r from-turquoise-450 to-turquoise-300">vanguardia</span> en Alsina.
+                        </h2>
+                        
+                        <p class="text-slate-300 text-lg sm:text-xl font-light leading-relaxed">
+                            Formando profesionales altamente calificados con un fuerte compromiso industrial, tecnológico y social. Explora nuestras especialidades, herramientas y el nuevo portal docente.
+                        </p>
+                        
+                        <div class="pt-2">
+                            <div class="flex space-x-2 border-b border-navy-700 pb-3 mb-4 font-mono text-xs uppercase">
+                                <button onclick="cambiarTabHero('estudiantes')" id="tab-estudiantes" class="px-4 py-2 rounded-lg bg-turquoise-450 text-navy-900 font-bold transition">Estudiantes</button>
+                                <button onclick="cambiarTabHero('familias')" id="tab-familias" class="px-4 py-2 rounded-lg bg-navy-800 text-slate-300 hover:text-white transition">Familias</button>
+                                <button onclick="cambiarTabHero('docentes')" id="tab-docentes" class="px-4 py-2 rounded-lg bg-navy-800 text-ambertech-500 hover:text-white transition">Docentes</button>
+                            </div>
+                            <div id="contenido-tab-hero" class="bg-navy-800/80 border border-turquoise-500/20 p-4 rounded-xl text-sm text-slate-300 font-mono">
+                                Acceso a calculadora de promedios, estado de matrícula, constancias y normativas vigentes.
+                            </div>
+                        </div>
+                    </div>
+
+              
+                    <div class="lg:col-span-5">
+                        <div class="bg-navy-800/90 border border-turquoise-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative glow-box">
+                            <div class="absolute -top-3.5 right-6 bg-ambertech-500 text-navy-900 text-xs font-mono font-black px-3 py-1 rounded-md uppercase tracking-wider shadow">
+                                Vínculos Oficiales
+                            </div>
+                            
+                            <h3 class="text-lg font-bold text-white mb-5 flex items-center font-mono border-b border-navy-700 pb-3">
+                                <i class="fa-solid fa-link text-turquoise-450 mr-2.5"></i> Accesos Rápidos
+                            </h3>
+                            
+                            <div class="space-y-3 font-mono text-sm">
+                                <a href="https://abc.gob.ar/" target="_blank" class="block bg-navy-900 p-3.5 rounded-xl border border-navy-700 hover:border-turquoise-450 transition flex justify-between items-center group">
+                                    <span class="text-slate-200 group-hover:text-turquoise-300 flex items-center"><i class="fa-solid fa-building-columns text-turquoise-450 mr-2.5"></i> Portal ABC (Provincia de Bs. As.)</span>
+                                    <i class="fa-solid fa-external-link text-slate-500 group-hover:text-turquoise-450"></i>
+                                </a>
+                                <a href="https://www.argentina.gob.ar/educacion/inet" target="_blank" class="block bg-navy-900 p-3.5 rounded-xl border border-navy-700 hover:border-turquoise-450 transition flex justify-between items-center group">
+                                    <span class="text-slate-200 group-hover:text-turquoise-300 flex items-center"><i class="fa-solid fa-industry text-turquoise-450 mr-2.5"></i> INET (Educación Técnica)</span>
+                                    <i class="fa-solid fa-external-link text-slate-500 group-hover:text-turquoise-450"></i>
+                                </a>
+                                <a href="#profesores" class="block bg-navy-900 p-3.5 rounded-xl border border-navy-700 hover:border-ambertech-500 transition flex justify-between items-center group">
+                                    <span class="text-slate-200 group-hover:text-ambertech-500 flex items-center"><i class="fa-solid fa-chalkboard-user text-ambertech-500 mr-2.5"></i> Espacio Docente STN2</span>
+                                    <i class="fa-solid fa-chevron-right text-slate-500 group-hover:text-ambertech-500"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+       
+        <section id="profesores" class="py-20 bg-navy-800/60 border-b border-turquoise-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-ambertech-500 text-xs font-mono uppercase tracking-widest font-bold">Portal Exclusivo Pedagógico</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 uppercase tracking-wide font-mono">Sitio para Profesores de Clase</h2>
+                    <p class="text-slate-300 mt-3 text-base">
+                        Espacio de trabajo docente con repositorio curricular, planillas de cátedra, circulares de secretaría y registro digital de actividades.
+                    </p>
+                </div>
+
+               
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    
+                    <div class="bg-navy-900 border border-turquoise-500/30 rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-turquoise-450 transition">
+                        <div>
+                            <div class="text-turquoise-450 text-2xl mb-3"><i class="fa-solid fa-book-bookmark"></i></div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-mono uppercase">Diseños Curriculares</h4>
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                                Descarga directa de programas oficiales de materias técnicas, ciclos básicos y superiores según DGCyE.
+                            </p>
+                        </div>
+                        <button onclick="showToast('Descargando compendio curricular oficial...', 'success')" class="w-full bg-navy-800 hover:bg-navy-700 text-turquoise-300 border border-turquoise-500/40 py-2.5 rounded-xl font-mono text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-download mr-1.5"></i> Descargar PDF
+                        </button>
+                    </div>
+
+                    <div class="bg-navy-900 border border-turquoise-500/30 rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-turquoise-450 transition">
+                        <div>
+                            <div class="text-ambertech-500 text-2xl mb-3"><i class="fa-solid fa-calendar-check"></i></div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-mono uppercase">Mesas de Examen</h4>
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                                Convocatorias, tribunales evaluadores y actas volantes para profesores titulares y suplentes.
+                            </p>
+                        </div>
+                        <button onclick="showToast('Cargando cronograma de mesas...', 'success')" class="w-full bg-navy-800 hover:bg-navy-700 text-ambertech-500 border border-ambertech-500/40 py-2.5 rounded-xl font-mono text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-calendar-days mr-1.5"></i> Ver Tribunales
+                        </button>
+                    </div>
+
+                    <div class="bg-navy-900 border border-turquoise-500/30 rounded-2xl p-6 shadow-xl flex flex-col justify-between hover:border-turquoise-450 transition">
+                        <div>
+                            <div class="text-turquoise-450 text-2xl mb-3"><i class="fa-solid fa-bullhorn"></i></div>
+                            <h4 class="text-lg font-bold text-white mb-2 font-mono uppercase">Circulares Docentes</h4>
+                            <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+                                Comunicados de secretaría, actos públicos de toma de horas y normativas sobre licencias y asistencias.
+                            </p>
+                        </div>
+                        <button onclick="showToast('Mostrando últimas circulares institucionales', 'warning')" class="w-full bg-navy-800 hover:bg-navy-700 text-turquoise-300 border border-turquoise-500/40 py-2.5 rounded-xl font-mono text-xs uppercase tracking-wider transition">
+                            <i class="fa-solid fa-file-pdf mr-1.5"></i> Ver Circulares
+                        </button>
+                    </div>
+
+                </div>
+
+                
+                <div class="bg-navy-900 border border-ambertech-500/40 rounded-2xl p-6 sm:p-8 shadow-xl max-w-3xl mx-auto">
+                    <h3 class="text-xl font-bold text-white mb-3 flex items-center font-mono">
+                        <i class="fa-solid fa-chalkboard text-ambertech-500 mr-2.5"></i> Registro de Asistencia y Contenidos de Cátedra
+                    </h3>
+                    <p class="text-slate-300 text-sm mb-6">Herramienta rápida para dejar asentado el tema impartido en clase y notificar a jefatura de área.</p>
+                    
+                    <form onsubmit="registrarClaseDocente(event)" class="space-y-4 font-mono text-sm">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs uppercase text-slate-300 mb-1">Profesor / Cátedra</label>
+                                <input type="text" id="docente-nombre" required placeholder="Ej: Prof. Gómez" class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase text-slate-300 mb-1">Curso y División</label>
+                                <input type="text" id="curso-docente" required placeholder="Ej: 4° 2ª Electromecánica" class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase text-slate-300 mb-1">Contenido / Tema Dictado</label>
+                            <input type="text" id="tema-docente" required placeholder="Ej: Bobinado de motores trifásicos en taller" class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                        </div>
+                        <button type="submit" class="w-full bg-ambertech-500 hover:bg-ambertech-600 text-navy-900 font-bold py-3 rounded-xl uppercase tracking-wider transition shadow-lg">
+                            Enviar Registro a Secretaría
+                        </button>
+                    </form>
+                    <div id="docente-feedback" class="mt-4 hidden p-3 bg-navy-800 border border-turquoise-500/40 rounded-xl text-center text-turquoise-300 text-xs"></div>
+                </div>
+
+            </div>
+        </section>
+
+    
+        <section id="programa" class="py-20 bg-navy-900 border-b border-turquoise-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-turquoise-450 text-xs font-mono uppercase tracking-widest font-bold">Estructura Curricular</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 uppercase tracking-wide font-mono">Ciclo del Programa Educativo</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-navy-800 border border-turquoise-500/30 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <span class="bg-turquoise-500/20 text-turquoise-300 text-xs font-mono font-bold px-3 py-1 rounded border border-turquoise-500/30">FASE 01</span>
+                            <h3 class="text-xl font-bold text-white mt-4 mb-2 uppercase font-mono">Inicio (Ciclo Básico)</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">1° y 2° año: Bases científicas, tecnológicas, matemáticas y primeros talleres generales de ajuste y carpintería.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-navy-700 text-xs font-mono text-turquoise-300">Duración: 1° y 2° Año</div>
+                    </div>
+
+                    <div class="bg-navy-800 border border-ambertech-500/40 rounded-2xl p-6 shadow-xl flex flex-col justify-between relative">
+                        <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-ambertech-500 text-navy-900 text-[10px] font-mono font-bold px-3 py-0.5 rounded uppercase">
+                            Especialización
+                        </div>
+                        <div>
+                            <span class="bg-ambertech-500/20 text-ambertech-500 text-xs font-mono font-bold px-3 py-1 rounded border border-ambertech-500/30">FASE 02</span>
+                            <h3 class="text-xl font-bold text-white mt-4 mb-2 uppercase font-mono">Desarrollo Superior</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">Del 3° al 6° año: Profundización técnica específica en Informática, Electromecánica o Construcciones con laboratorios avanzados.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-navy-700 text-xs font-mono text-ambertech-500">Duración: 3° a 6° Año</div>
+                    </div>
+
+                    <div class="bg-navy-800 border border-turquoise-500/30 rounded-2xl p-6 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <span class="bg-emerald-500/20 text-emerald-400 text-xs font-mono font-bold px-3 py-1 rounded border border-emerald-500/30">FASE 03</span>
+                            <h3 class="text-xl font-bold text-white mt-4 mb-2 uppercase font-mono">Finalización y Egreso</h3>
+                            <p class="text-slate-300 text-sm leading-relaxed">7° año: Prácticas Profesionalizantes en entornos productivos reales y defensa del Proyecto Final integrador.</p>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-navy-700 text-xs font-mono text-emerald-400">Duración: 7° Año (Final)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="especialidades" class="py-20 bg-navy-800/40 border-b border-turquoise-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-turquoise-450 text-xs font-mono uppercase tracking-widest font-bold">Oferta Académica Habilitada</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 uppercase tracking-wide font-mono">Especialidades Técnicas STN2</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-navy-900 border border-navy-700 rounded-2xl p-6 shadow-xl hover:border-turquoise-450 transition group">
+                        <div class="bg-navy-800 p-4 rounded-xl inline-block text-turquoise-450 mb-4 group-hover:bg-turquoise-450 group-hover:text-navy-900 transition">
+                            <i class="fa-solid fa-laptop-code text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase">Técnico en Informática</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Desarrollo de software, bases de datos, redes informáticas, soporte técnico y arquitectura de sistemas.</p>
+                    </div>
+
+                    <div class="bg-navy-900 border border-navy-700 rounded-2xl p-6 shadow-xl hover:border-turquoise-450 transition group">
+                        <div class="bg-navy-800 p-4 rounded-xl inline-block text-turquoise-450 mb-4 group-hover:bg-turquoise-450 group-hover:text-navy-900 transition">
+                            <i class="fa-solid fa-bolt text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase">Técnico Electromecánico</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Instalaciones eléctricas industriales, sistemas mecánicos, hidráulicos, neumáticos y automatización con PLC.</p>
+                    </div>
+
+                    <div class="bg-navy-900 border border-navy-700 rounded-2xl p-6 shadow-xl hover:border-turquoise-450 transition group">
+                        <div class="bg-navy-800 p-4 rounded-xl inline-block text-turquoise-450 mb-4 group-hover:bg-turquoise-450 group-hover:text-navy-900 transition">
+                            <i class="fa-solid fa-drafting-compass text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2 font-mono uppercase">Maestro Mayor de Obras</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">Construcción de obras civiles e industriales, cálculo estructural, dirección de obra, cómputo y presupuesto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     
+        <section id="herramientas" class="py-20 bg-navy-900 border-b border-turquoise-500/20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <span class="text-turquoise-450 text-xs font-mono uppercase tracking-widest font-bold">Módulos Interactivos</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2 uppercase tracking-wide font-mono">Utilidades Académicas</h2>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              
+                    <div class="bg-navy-800 border border-turquoise-500/30 rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center font-mono">
+                            <i class="fa-solid fa-calculator text-turquoise-450 mr-2.5"></i> Calculadora de Nota Ponderada
+                        </h3>
+                        <form id="calc-form" class="space-y-4 font-mono text-sm">
+                            <div>
+                                <label class="block text-xs uppercase text-slate-300 mb-1">Nota 1° Cuatrimestre (40%)</label>
+                                <input type="number" id="nota1" min="1" max="10" step="0.1" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none" placeholder="Ej: 7.5">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase text-slate-300 mb-1">Nota 2° Cuatrimestre (40%)</label>
+                                <input type="number" id="nota2" min="1" max="10" step="0.1" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none" placeholder="Ej: 8.0">
+                            </div>
+                            <div>
+                                <label class="block text-xs uppercase text-slate-300 mb-1">Nota Taller / Prácticas (20%)</label>
+                                <input type="number" id="notataller" min="1" max="10" step="0.1" required class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none" placeholder="Ej: 9.0">
+                            </div>
+                            <button type="button" onclick="calcularPromedio()" class="w-full bg-turquoise-450 hover:bg-turquoise-500 text-navy-900 font-bold py-3 rounded-xl uppercase tracking-wider transition">
+                                Calcular Promedio Final
+                            </button>
+                        </form>
+                        <div id="resultado-calc" class="mt-4 p-4 bg-navy-900 border border-turquoise-500/30 rounded-xl text-center hidden font-mono">
+                            <span class="text-xs text-slate-400 block mb-1">ESTADO:</span>
+                            <span id="texto-resultado" class="text-2xl font-bold"></span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-navy-800 border border-turquoise-500/30 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-lg font-bold text-white mb-4 flex items-center font-mono">
+                                <i class="fa-solid fa-id-card text-turquoise-450 mr-2.5"></i> Verificación de Alumno Regular
+                            </h3>
+                            <p class="text-slate-300 text-sm mb-6">Ingrese su número de DNI para verificar el estado de tramitación en el sistema institucional.</p>
+                            <div class="space-y-4 font-mono text-sm">
+                                <div>
+                                    <label class="block text-xs uppercase text-slate-300 mb-1">DNI del Alumno</label>
+                                    <input type="text" id="dni-input" class="w-full bg-navy-900 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none" placeholder="Ej: 45123456">
+                                </div>
+                                <button type="button" onclick="consultarMatricula()" class="w-full bg-navy-700 hover:bg-navy-600 text-turquoise-300 border border-turquoise-500/40 py-3 rounded-xl font-bold uppercase tracking-wider transition">
+                                    Consultar en Base STN2
+                                </button>
+                            </div>
+                        </div>
+                        <div id="resultado-matricula" class="mt-6 p-4 bg-navy-900 border border-turquoise-500/30 rounded-xl text-center hidden font-mono">
+                            <span id="texto-matricula" class="text-sm font-semibold"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="contacto" class="py-20 bg-navy-800/40">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-5 space-y-6">
+                        <span class="text-turquoise-450 text-xs font-mono uppercase tracking-widest font-bold">Canales Oficiales</span>
+                        <h2 class="text-3xl font-extrabold text-white uppercase tracking-wide font-mono">Contacto y Secretaría</h2>
+                        <p class="text-slate-300 leading-relaxed">Comuníquese con la administración escolar o jefatura de área técnica de Valentín Alsina.</p>
+                        
+                        <div class="space-y-3 font-mono text-sm text-slate-300">
+                            <p><i class="fa-solid fa-location-dot text-turquoise-450 mr-2"></i> Valentín Alsina, Lanús, Buenos Aires.</p>
+                            <p><i class="fa-solid fa-envelope text-turquoise-450 mr-2"></i> contacto@eest2alsina.edu.ar</p>
+                            <p><i class="fa-solid fa-clock text-turquoise-450 mr-2"></i> Lunes a Viernes de 07:30 a 18:00 hs.</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7">
+                        <div class="bg-navy-900 border border-turquoise-500/30 rounded-2xl p-8 shadow-xl">
+                            <form onsubmit="enviarMensaje(event)" class="space-y-4 font-mono text-sm">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-xs uppercase text-slate-300 mb-1">Nombre y Apellido</label>
+                                        <input type="text" required class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs uppercase text-slate-300 mb-1">Correo Electrónico</label>
+                                        <input type="email" required class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase text-slate-300 mb-1">Asunto de Consulta</label>
+                                    <input type="text" required class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none">
+                                </div>
+                                <div>
+                                    <label class="block text-xs uppercase text-slate-300 mb-1">Mensaje</label>
+                                    <textarea rows="4" required class="w-full bg-navy-800 border border-navy-700 rounded-xl px-4 py-2.5 text-white focus:outline-none"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-turquoise-450 hover:bg-turquoise-500 text-navy-900 font-bold py-3 rounded-xl uppercase tracking-wider transition">
+                                    Enviar Mensaje a Secretaría
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy-900 border-t border-turquoise-500/20 py-8 text-center text-xs font-mono text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
+            <p>&copy; 2026 E.E.S.T. N° 2 "Ing. Emilio Mitre" (STN2) - Valentín Alsina, Lanús, Buenos Aires.</p>
+            <p class="text-turquoise-300 font-bold">Institución Educativa Técnico Profesional - Provincia de Buenos Aires</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
